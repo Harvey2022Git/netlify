@@ -1,12 +1,27 @@
+let currentLang = localStorage.getItem('lang') || 'zh';
+
 document.addEventListener('DOMContentLoaded', function() {
+    initLanguage();
     initNavigation();
     initDemo();
     initScrollAnimations();
 });
 
+function initLanguage() {
+    currentLang = localStorage.getItem('lang') || 'zh';
+    updatePageContent();
+    updateLangButton();
+}
+
+function toggleLanguage() {
+    currentLang = currentLang === 'zh' ? 'en' : 'zh';
+    localStorage.setItem('lang', currentLang);
+    updatePageContent();
+    updateLangButton();
+}
+
 function initNavigation() {
     const nav = document.querySelector('.nav');
-    let lastScroll = 0;
     
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
@@ -16,8 +31,6 @@ function initNavigation() {
         } else {
             nav.style.boxShadow = 'none';
         }
-        
-        lastScroll = currentScroll;
     });
     
     const navLinks = document.querySelectorAll('.nav-links a');
@@ -42,19 +55,7 @@ function initDemo() {
         salesValue.textContent = salesInput.value;
         daysValue.textContent = daysInput.value;
         
-        const sales = parseInt(salesInput.value);
-        const days = parseInt(daysInput.value);
-        
-        if (days > 60 && sales < 200) {
-            diagResult.className = 'demo-result danger';
-            diagResult.innerHTML = '<div class="demo-result-title">诊断：滞销风险</div><div class="demo-result-desc">库存天数过高且销量低迷，建议发起清理策略。</div>';
-        } else if (days < 7 && sales > 800) {
-            diagResult.className = 'demo-result warning';
-            diagResult.innerHTML = '<div class="demo-result-title">诊断：缺货预警</div><div class="demo-result-desc">销量增速快，库存即将耗尽，请立即补货。</div>';
-        } else {
-            diagResult.className = 'demo-result success';
-            diagResult.innerHTML = '<div class="demo-result-title">诊断：健康运行</div><div class="demo-result-desc">当前库存水平与周转率处于目标区间。</div>';
-        }
+        updateDemoResult();
     }
     
     salesInput.addEventListener('input', updateDemo);

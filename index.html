@@ -13,13 +13,16 @@
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Harvey</a>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">首页</a></li>
-                <li><a href="about.html">关于我</a></li>
-                <li><a href="projects.html">项目</a></li>
-                <li><a href="blog.html">博客</a></li>
-                <li><a href="contact.html">联系</a></li>
+                <li><a href="index.html" class="active" data-i18n="nav.home">首页</a></li>
+                <li><a href="about.html" data-i18n="nav.about">关于我</a></li>
+                <li><a href="projects.html" data-i18n="nav.projects">项目</a></li>
+                <li><a href="blog.html" data-i18n="nav.blog">博客</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">联系</a></li>
             </ul>
-            <a href="contact.html" class="nav-cta">联系我</a>
+            <div class="nav-actions">
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">EN</button>
+                <a href="contact.html" class="nav-cta" data-i18n="nav.contactMe">联系我</a>
+            </div>
         </div>
     </nav>
 
@@ -27,21 +30,19 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Hi, 我是 <span>Harvey</span></h1>
-                    <p class="hero-subtitle">数据科学家 | 供应链专家 | 机械工程背景</p>
+                    <h1><span data-i18n="hero.greeting">Hi, 我是</span> <span class="highlight">Harvey</span></h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">数据科学家 | 供应链专家 | 机械工程背景</p>
                     <div class="hero-tags">
-                        <span class="tag">需求预测</span>
-                        <span class="tag">库存优化</span>
-                        <span class="tag">智能诊断</span>
+                        <span class="tag" data-i18n="hero.tag1">需求预测</span>
+                        <span class="tag" data-i18n="hero.tag2">库存优化</span>
+                        <span class="tag" data-i18n="hero.tag3">智能诊断</span>
                     </div>
                     <div class="hero-buttons">
                         <a href="projects.html" class="btn-primary">
-                            查看项目
+                            <span data-i18n="hero.viewProjects">查看项目</span>
                             <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
                         </a>
-                        <a href="about.html" class="btn-secondary">
-                            了解更多
-                        </a>
+                        <a href="about.html" class="btn-secondary" data-i18n="hero.learnMore">了解更多</a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -51,13 +52,13 @@
                                 <i data-lucide="activity" style="width: 24px; height: 24px;"></i>
                             </div>
                             <div>
-                                <div class="hero-card-title">SKU 智能诊断系统</div>
-                                <div class="hero-card-subtitle">实时库存健康评估</div>
+                                <div class="hero-card-title" data-i18n="hero.cardTitle">SKU 智能诊断系统</div>
+                                <div class="hero-card-subtitle" data-i18n="hero.cardSubtitle">实时库存健康评估</div>
                             </div>
                         </div>
                         <div style="background: var(--bg-light); border-radius: 8px; padding: 16px;">
                             <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                                <span style="color: var(--text-gray); font-size: 0.875rem;">健康度</span>
+                                <span style="color: var(--text-gray); font-size: 0.875rem;" data-i18n="hero.health">健康度</span>
                                 <span style="color: #059669; font-weight: 600;">92%</span>
                             </div>
                             <div style="background: var(--bg-gray); border-radius: 4px; height: 8px; overflow: hidden;">
@@ -74,16 +75,16 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-number">10%↑</div>
-                    <div class="stat-label">需求预测准确率对比Baseline提升</div>
+                    <div class="stat-number" data-i18n="stats.stat1Value">10%↑</div>
+                    <div class="stat-label" data-i18n="stats.stat1Label">需求预测准确率对比Baseline提升</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number green">500+h</div>
-                    <div class="stat-label">低代码平台每人年均节省工时</div>
+                    <div class="stat-number green" data-i18n="stats.stat2Value">500+h</div>
+                    <div class="stat-label" data-i18n="stats.stat2Label">低代码平台每人年均节省工时</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number orange">显著↓</div>
-                    <div class="stat-label">库存率与缺货率优化</div>
+                    <div class="stat-number orange" data-i18n="stats.stat3Value">显著↓</div>
+                    <div class="stat-label" data-i18n="stats.stat3Label">库存率与缺货率优化</div>
                 </div>
             </div>
         </div>
@@ -92,21 +93,21 @@
     <section class="demo">
         <div class="container">
             <div class="section-header">
-                <h2>SKU 智能诊断系统演示</h2>
-                <p>实时评估库存健康状态，辅助决策</p>
+                <h2 data-i18n="demo.title">SKU 智能诊断系统演示</h2>
+                <p data-i18n="demo.subtitle">实时评估库存健康状态，辅助决策</p>
             </div>
             <div class="demo-card">
                 <div class="demo-input-group">
-                    <label>月销量: <span id="salesValue" class="demo-value">500</span></label>
+                    <label><span data-i18n="demo.salesLabel">月销量:</span> <span id="salesValue" class="demo-value">500</span></label>
                     <input type="range" id="sales" class="demo-slider" min="0" max="2000" value="500">
                 </div>
                 <div class="demo-input-group">
-                    <label>库存周转天数: <span id="daysValue" class="demo-value">30</span></label>
+                    <label><span data-i18n="demo.daysLabel">库存周转天数:</span> <span id="daysValue" class="demo-value">30</span></label>
                     <input type="range" id="days" class="demo-slider" min="0" max="120" value="30">
                 </div>
                 <div id="diagResult" class="demo-result success">
-                    <div class="demo-result-title">诊断：健康运行</div>
-                    <div class="demo-result-desc">当前库存水平与周转率处于目标区间。</div>
+                    <div class="demo-result-title" data-i18n="demo.resultHealthy">诊断：健康运行</div>
+                    <div class="demo-result-desc" data-i18n="demo.resultHealthyDesc">当前库存水平与周转率处于目标区间。</div>
                 </div>
             </div>
         </div>
@@ -115,14 +116,14 @@
     <section class="skills">
         <div class="container">
             <div class="section-header">
-                <h2>专业技能</h2>
-                <p>跨领域技术栈，数据驱动决策</p>
+                <h2 data-i18n="skills.title">专业技能</h2>
+                <p data-i18n="skills.subtitle">跨领域技术栈，数据驱动决策</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>
                         <i data-lucide="database" style="width: 20px; height: 20px;"></i>
-                        数据科学栈
+                        <span data-i18n="skills.category1">数据科学栈</span>
                     </h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python (Pandas/Scipy)</span>
@@ -135,13 +136,13 @@
                 <div class="skill-category">
                     <h3>
                         <i data-lucide="settings" style="width: 20px; height: 20px;"></i>
-                        工程与自动化
+                        <span data-i18n="skills.category2">工程与自动化</span>
                     </h3>
                     <div class="skill-tags">
                         <span class="skill-tag">AutoCAD</span>
                         <span class="skill-tag">Solidworks</span>
                         <span class="skill-tag">Pro/E</span>
-                        <span class="skill-tag">WMS/WCS 选型</span>
+                        <span class="skill-tag">WMS/WCS</span>
                     </div>
                 </div>
             </div>
@@ -151,8 +152,8 @@
     <section class="blog">
         <div class="container">
             <div class="section-header">
-                <h2>技术博客</h2>
-                <p>分享供应链优化与数据科学实践</p>
+                <h2 data-i18n="blog.title">技术博客</h2>
+                <p data-i18n="blog.subtitle">分享供应链优化与数据科学实践</p>
             </div>
             <div class="blog-grid">
                 <article class="blog-card">
@@ -160,9 +161,9 @@
                         <i data-lucide="trending-up" style="width: 48px; height: 48px;"></i>
                     </div>
                     <div class="blog-card-content">
-                        <div class="blog-card-date">2026年2月</div>
-                        <h3 class="blog-card-title">需求预测模型实战</h3>
-                        <p class="blog-card-excerpt">如何使用LightGBM构建高精度的需求预测模型...</p>
+                        <div class="blog-card-date" data-i18n="blog.post1Date">2026年2月</div>
+                        <h3 class="blog-card-title" data-i18n="blog.post1Title">需求预测模型实战</h3>
+                        <p class="blog-card-excerpt" data-i18n="blog.post1Excerpt">如何使用LightGBM构建高精度的需求预测模型...</p>
                     </div>
                 </article>
                 <article class="blog-card">
@@ -170,9 +171,9 @@
                         <i data-lucide="package" style="width: 48px; height: 48px;"></i>
                     </div>
                     <div class="blog-card-content">
-                        <div class="blog-card-date">2026年1月</div>
-                        <h3 class="blog-card-title">库存优化策略</h3>
-                        <p class="blog-card-excerpt">从安全库存到动态补货，库存管理的核心方法...</p>
+                        <div class="blog-card-date" data-i18n="blog.post2Date">2026年1月</div>
+                        <h3 class="blog-card-title" data-i18n="blog.post2Title">库存优化策略</h3>
+                        <p class="blog-card-excerpt" data-i18n="blog.post2Excerpt">从安全库存到动态补货，库存管理的核心方法...</p>
                     </div>
                 </article>
                 <article class="blog-card">
@@ -180,9 +181,9 @@
                         <i data-lucide="cpu" style="width: 48px; height: 48px;"></i>
                     </div>
                     <div class="blog-card-content">
-                        <div class="blog-card-date">2025年12月</div>
-                        <h3 class="blog-card-title">低代码平台实践</h3>
-                        <p class="blog-card-excerpt">如何搭建企业级低代码平台提升团队效率...</p>
+                        <div class="blog-card-date" data-i18n="blog.post3Date">2025年12月</div>
+                        <h3 class="blog-card-title" data-i18n="blog.post3Title">低代码平台实践</h3>
+                        <p class="blog-card-excerpt" data-i18n="blog.post3Excerpt">如何搭建企业级低代码平台提升团队效率...</p>
                     </div>
                 </article>
             </div>
@@ -194,30 +195,30 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>Harvey</h3>
-                    <p>数据科学家 | 供应链专家<br>专注于数据驱动的供应链优化解决方案</p>
+                    <p data-i18n="footer.brand">数据科学家 | 供应链专家<br>专注于数据驱动的供应链优化解决方案</p>
                 </div>
                 <div class="footer-links">
-                    <h4>导航</h4>
+                    <h4 data-i18n="footer.navTitle">导航</h4>
                     <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="about.html">关于我</a></li>
-                        <li><a href="projects.html">项目</a></li>
-                        <li><a href="blog.html">博客</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">关于我</a></li>
+                        <li><a href="projects.html" data-i18n="nav.projects">项目</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">博客</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>专业领域</h4>
+                    <h4 data-i18n="footer.expertiseTitle">专业领域</h4>
                     <ul>
-                        <li><a href="#">需求预测</a></li>
-                        <li><a href="#">库存优化</a></li>
-                        <li><a href="#">智能诊断</a></li>
-                        <li><a href="#">数据可视化</a></li>
+                        <li><a href="#" data-i18n="footer.expertise1">需求预测</a></li>
+                        <li><a href="#" data-i18n="footer.expertise2">库存优化</a></li>
+                        <li><a href="#" data-i18n="footer.expertise3">智能诊断</a></li>
+                        <li><a href="#" data-i18n="footer.expertise4">数据可视化</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>联系</h4>
+                    <h4 data-i18n="footer.contactTitle">联系</h4>
                     <ul>
-                        <li><a href="contact.html">联系我</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">联系我</a></li>
                         <li><a href="#">LinkedIn</a></li>
                         <li><a href="#">GitHub</a></li>
                         <li><a href="#">Email</a></li>
@@ -225,11 +226,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Harvey. All rights reserved.</p>
+                <p data-i18n="footer.copyright">© 2026 Harvey. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script>
         lucide.createIcons();
