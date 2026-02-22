@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>刘祖兵 | 数据科学家 - 个人作品集</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+
+        .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+
+    </style>
+
+</head>
+
+<body class="bg-slate-900 text-slate-200 font-sans">
+
+
+
+    <!-- Hero Section -->
+
+    <header class="py-20 px-6 gradient-bg border-b border-slate-800">
+
+        <div class="max-w-4xl mx-auto text-center">
+
+            <h1 class="text-5xl font-extrabold text-white mb-4">刘祖兵</h1>
+
+            <p class="text-xl text-blue-400 mb-6 font-medium">数据科学家 | 供应链专家 | 机械工程背景</p>
+
+            <div class="flex justify-center gap-4 text-sm">
+
+                <span class="px-3 py-1 bg-slate-800 rounded-full border border-slate-700">字节跳动</span>
+
+                <span class="px-3 py-1 bg-slate-800 rounded-full border border-slate-700">顺丰科技</span>
+
+                <span class="px-3 py-1 bg-slate-800 rounded-full border border-slate-700">山东省优秀毕业生</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="max-w-5xl mx-auto px-6 py-12 space-y-20">
+
+
+
+        <!-- 核心竞争力 -->
+
+        <section>
+
+            <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-2">
+
+                <i data-lucide="zap" class="text-yellow-400"></i> 核心战果
+
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <div class="glass-card p-6 rounded-xl text-center">
+
+                    <div class="text-3xl font-bold text-blue-500 mb-2">10%↑</div>
+
+                    <p class="text-sm text-slate-400">顺丰需求预测准确率对比Baseline提升 [1]</p>
+
+                </div>
+
+                <div class="glass-card p-6 rounded-xl text-center">
+
+                    <div class="text-3xl font-bold text-green-500 mb-2">500+h</div>
+
+                    <p class="text-sm text-slate-400">低代码平台每人年均节省工时 [1]</p>
+
+                </div>
+
+                <div class="glass-card p-6 rounded-xl text-center">
+
+                    <div class="text-3xl font-bold text-purple-500 mb-2">XX%↓</div>
+
+                    <p class="text-sm text-slate-400">字节跳动库存率与缺货率显著优化 [1]</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 交互式 Demo -->
+
+        <section class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
+
+            <div class="text-center mb-10">
+
+                <h2 class="text-2xl font-bold text-white mb-2">SKU 智能诊断系统 (ARP) 演示</h2>
+
+                <p class="text-slate-400">基于您在顺丰与字节的库存健康管理逻辑 [1]</p>
+
+            </div>
+
+            
+
+            <div class="max-w-md mx-auto space-y-6 bg-slate-900 p-6 rounded-xl shadow-2xl">
+
+                <div>
+
+                    <label class="block text-sm mb-2">月销量: <span id="salesVal" class="text-blue-400 font-bold">500</span></label>
+
+                    <input type="range" id="sales" min="0" max="2000" value="500" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer">
+
+                </div>
+
+                <div>
+
+                    <label class="block text-sm mb-2">库存周转天数: <span id="daysVal" class="text-blue-400 font-bold">30</span></label>
+
+                    <input type="range" id="days" min="0" max="120" value="30" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer">
+
+                </div>
+
+                
+
+                <div id="diagResult" class="mt-8 p-4 rounded-lg border border-green-500/30 bg-green-500/10 text-green-400">
+
+                    <div class="font-bold mb-1">诊断结果：健康运行</div>
+
+                    <p class="text-xs opacity-80">当前库存与销量匹配良好 [1]。</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 技能矩阵 -->
+
+        <section class="grid md:grid-cols-2 gap-12">
+
+            <div>
+
+                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+
+                    <i data-lucide="code-2" class="text-blue-400"></i> 数据科学栈
+
+                </h3>
+
+                <div class="flex flex-wrap gap-2 text-sm text-slate-300">
+
+                    <span class="bg-slate-800 px-3 py-1 rounded">Python (Pandas/Scipy)</span>
+
+                    <span class="bg-slate-800 px-3 py-1 rounded">SQL/Hive</span>
+
+                    <span class="bg-slate-800 px-3 py-1 rounded">LightGBM</span>
+
+                    <span class="bg-slate-800 px-3 py-1 rounded">Pytorch</span>
+
+                    <span class="bg-slate-800 px-3 py-1 rounded">Tableau</span>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+
+                    <i data-lucide="settings" class="text-red-400"></i> 工程与自动化
+
+                </h3>
+
+                <div class="flex flex-wrap gap-2 text-sm text-slate-300">
+
+                    <span class="bg-slate-800 px-3 py-1 rounded">AutoCAD</span>
+
+                    <span class="bg-slate-800 px-3 py-1 rounded">Solidworks</span>
+
+                    <span class="bg-slate-800 px-3 py-1 rounded">Pro/E</span>
+
+                    <span class="bg-slate-800 px-3 py-1 rounded">WMS/WCS 选型</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer class="py-12 border-t border-slate-800 text-center text-slate-500 text-sm">
+
+        <p>© 2024 刘祖兵 - 个人 Portfolio | 包含顺丰科技与字节跳动实战案例 [1]</p>
+
+    </footer>
+
+
+
+    <script>
+
+        // 初始化图标
+
+        lucide.createIcons();
+
+
+
+        // SKU 诊断逻辑
+
+        const salesIn = document.getElementById('sales');
+
+        const daysIn = document.getElementById('days');
+
+        const diagBox = document.getElementById('diagResult');
+
+
+
+        function update() {
+
+            document.getElementById('salesVal').innerText = salesIn.value;
+
+            document.getElementById('daysVal').innerText = daysIn.value;
+
+            
+
+            const s = parseInt(salesIn.value);
+
+            const d = parseInt(daysIn.value);
+
+
+
+            if (d > 60 && s < 200) {
+
+                diagBox.className = "mt-8 p-4 rounded-lg border border-red-500/30 bg-red-500/10 text-red-400";
+
+                diagBox.innerHTML = "<b>诊断：滞销风险</b><br><small>库存天数过高且销量低迷，建议发起清理策略 [1]。</small>";
+
+            } else if (d < 7 && s > 800) {
+
+                diagBox.className = "mt-8 p-4 rounded-lg border border-orange-500/30 bg-orange-500/10 text-orange-400";
+
+                diagBox.innerHTML = "<b>诊断：缺货预警</b><br><small>销量增速快，库存即将耗尽，请立即补货 [1]。</small>";
+
+            } else {
+
+                diagBox.className = "mt-8 p-4 rounded-lg border border-green-500/30 bg-green-500/10 text-green-400";
+
+                diagBox.innerHTML = "<b>诊断：健康运行</b><br><small>当前库存水平与周转率处于目标区间 [1]。</small>";
+
+            }
+
+        }
+
+
+
+        salesIn.oninput = update;
+
+        daysIn.oninput = update;
+
+    </script>
+
+</body>
+
+</html>
